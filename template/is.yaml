@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/generated-by: OpenShiftNewApp
+    creationTimestamp: "2021-02-18T18:46:19Z"
+    generation: 1
+    labels:
+      app: quotesapi
+      app.kubernetes.io/component: quotesapi
+      app.kubernetes.io/instance: quotesapi
+    managedFields:
+    - apiVersion: image.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/generated-by: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+      manager: oc
+      operation: Update
+      time: "2021-02-18T18:46:19Z"
+    name: quotesapi
+    namespace: durga-haridoss-rbc-com-quotes-dev
+    resourceVersion: "2893033"
+    selfLink: /apis/image.openshift.io/v1/namespaces/durga-haridoss-rbc-com-quotes-dev/imagestreams/quotesapi
+    uid: 58012644-2b18-4adf-8e4b-3bdad1b5e9a3
+  spec:
+    lookupPolicy:
+      local: false
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/durga-haridoss-rbc-com-quotes-dev/quotesapi
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/durga-haridoss-rbc-com-quotes-dev/quotesapi
+    tags:
+    - items:
+      - created: "2021-02-18T18:46:53Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/durga-haridoss-rbc-com-quotes-dev/quotesapi@sha256:7d8cbd87b637628da8922900f90b995b0700fff221d2289e4e5658cb8866687c
+        generation: 1
+        image: sha256:7d8cbd87b637628da8922900f90b995b0700fff221d2289e4e5658cb8866687c
+      tag: latest
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    annotations:
+      openshift.io/image.dockerRepositoryCheck: "2021-02-18T18:46:10Z"
+    creationTimestamp: "2021-02-18T18:46:10Z"
+    generation: 2
+    name: quotesdb
+    namespace: durga-haridoss-rbc-com-quotes-dev
+    resourceVersion: "2892646"
+    selfLink: /apis/image.openshift.io/v1/namespaces/durga-haridoss-rbc-com-quotes-dev/imagestreams/quotesdb
+    uid: 8c4953d1-83d6-47f5-bf6e-4a19b3db9fa3
+  spec:
+    lookupPolicy:
+      local: false
+    tags:
+    - annotations: null
+      from:
+        kind: DockerImage
+        name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+      generation: 2
+      importPolicy: {}
+      name: "5.7"
+      referencePolicy:
+        type: Source
+  status:
+    dockerImageRepository: image-registry.openshift-image-registry.svc:5000/durga-haridoss-rbc-com-quotes-dev/quotesdb
+    publicDockerImageRepository: default-route-openshift-image-registry.apps.na45.prod.nextcle.com/durga-haridoss-rbc-com-quotes-dev/quotesdb
+    tags:
+    - items:
+      - created: "2021-02-18T18:46:10Z"
+        dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+        generation: 2
+        image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+      tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
