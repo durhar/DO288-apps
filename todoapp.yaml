@@ -409,4 +409,7 @@ parameters:
 - displayName: Host name to acccess the To Do List back-end HTTP API
   name: BACKEND
   required: true
-
+- displayName: database on start up flag 
+  name: CLEAN_DATABASE 
+  required: true
+  value: "false"
